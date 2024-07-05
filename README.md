@@ -23,18 +23,17 @@ The dataset used in this project is the Alzheimer's Dataset (4 class of Images) 
 
 First, clone this repository and navigate into the project directory:
 
-```bash
-git clone https://github.com/your-username/AD-Classification.git
-cd AD-Classification
 Install the required packages:
-
-bash
-Copy code
 pip install torch torchvision pillow numpy matplotlib scikit-learn seaborn
-Data Preparation
-The script downloads and extracts the dataset from Kaggle.
 
+Data Preparation
+The script downloads and extracts the dataset from Kaggle. The data preparation steps include:
+
+Downloading and extracting the dataset.
+Applying transformations like resizing, grayscaling, and normalization.
+Splitting the dataset into training, validation, and test sets.
 Model Architecture
+
 The CNN architecture consists of:
 
 Convolutional layers for feature extraction
@@ -42,27 +41,27 @@ Max pooling layers for downsampling
 ReLU activation functions
 Fully connected (dense) layers for classification
 Training and Validation
-The dataset is split into training and validation sets (80-20 split). The model is trained using the CrossEntropyLoss and Adam optimizer. Early stopping is implemented to prevent overfitting.
+The dataset is split into training,testing and validation sets . The model is trained using the CrossEntropyLoss and Adam optimizer. Early stopping is implemented to prevent overfitting. 
 
+The training process includes:
+
+Initializing the model
+Defining the loss function and optimizer
+Training the model for a specified number of epochs
+Evaluating the model on the validation set
+Saving the best model based on validation loss
 Evaluation
-The model's performance is evaluated using accuracy, precision, and recall metrics. A confusion matrix is also plotted to visualize the classification results.
+The model's performance is evaluated using:
 
-Usage
-To train the model, run the training script:
+Accuracy, precision, and recall metrics for each class
+Confusion matrix to visualize classification results
+Plots of training and validation loss, and validation accuracy
 
-bash
-Copy code
-python train.py
-To evaluate the model, run the evaluation script:
+The results include:
 
-bash
-Copy code
-python evaluate.py
-To predict on a new image, use the prediction script:
+Training and validation loss plots
+Validation accuracy plot
+Confusion matrix for classification results
+Metrics for each class (accuracy, precision, recall)
 
-bash
-Copy code
-python predict.py --image_path path_to_image
-Results
-Training and validation loss, as well as validation accuracy, are plotted after training. The model achieves high accuracy in classifying the images into the respective categories.
 
