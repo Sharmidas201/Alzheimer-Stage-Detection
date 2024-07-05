@@ -23,16 +23,17 @@ The dataset used in this project is the Alzheimer's Dataset (4 class of Images) 
 
 First, clone this repository and navigate into the project directory:
 
-Install the required packages:
+### Install the required packages:
 pip install torch torchvision pillow numpy matplotlib scikit-learn seaborn
 
-Data Preparation
+### Data Preparation
 The script downloads and extracts the dataset from Kaggle. The data preparation steps include:
 
-Downloading and extracting the dataset.
+### Downloading and extracting the dataset.
 Applying transformations like resizing, grayscaling, and normalization.
 Splitting the dataset into training, validation, and test sets.
-Model Architecture
+
+### Model Architecture
 
 The CNN architecture consists of:
 
@@ -43,14 +44,15 @@ Fully connected (dense) layers for classification
 Training and Validation
 The dataset is split into training,testing and validation sets . The model is trained using the CrossEntropyLoss and Adam optimizer. Early stopping is implemented to prevent overfitting. 
 
-The training process includes:
+### The training process includes:
 
 Initializing the model
 Defining the loss function and optimizer
 Training the model for a specified number of epochs
 Evaluating the model on the validation set
 Saving the best model based on validation loss
-Evaluation
+
+### Evaluation
 The model's performance is evaluated using:
 
 Accuracy, precision, and recall metrics for each class
